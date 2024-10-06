@@ -1,3 +1,4 @@
+Coding
 Private Sub mnucolor_Click()
 cdb.ShowColor
 rtb.SelColor = cdb.Color
@@ -13,4 +14,18 @@ rtb.SelFontSize = cdb.FontSize
 rtb.SelBold = cdb.FontBold
 rtb.SelItalic = cdb.FontItalic
 rtb.SelUnderline = cdb.FontStrikethru
+End Sub
+Private Sub mnuopen_Click()
+rtb.Visible = True
+cdb.ShowOpen
+rtb.LoadFile (cdb.FileName)
+End Sub
+Private Sub mnusave_Click()
+cdb.ShowSave
+rtb.SaveFile (cdb.FileName)
+MsgBox ("FILE SAVED" & cdb.FileName)
+End Sub
+Private Sub mnunew_Click()
+rtb.Visible = True
+rtb.Text = " "
 End Sub
