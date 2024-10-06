@@ -1,0 +1,16 @@
+Private Sub mnucolor_Click()
+cdb.ShowColor
+rtb.SelColor = cdb.Color
+End Sub
+Private Sub mnuexit_Click()
+End
+End Sub
+Private Sub mnufont_Click()
+cdb.Flags = cdlCFBoth Or cdlCFLeffects
+cdb.ShowFont
+rtb.SelFontName = cdb.FontName
+rtb.SelFontSize = cdb.FontSize
+rtb.SelBold = cdb.FontBold
+rtb.SelItalic = cdb.FontItalic
+rtb.SelUnderline = cdb.FontStrikethru
+End Sub
