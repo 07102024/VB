@@ -1,0 +1,16 @@
+Private Sub Form_Load()
+Timer1.Enabled = False
+End Sub
+Private Sub start_Click()
+Timer1.Enabled = True
+End Sub
+Private Sub stop_Click()
+Timer1.Enabled = False
+End Sub
+Private Sub Timer1_Timer()
+Image1.Left = Image1.Left + 10
+If Image1.Left >= 1000 Then
+Image1.Left = Image1.Left + 10
+Image1.Top = Image1.Top - 10
+End If
+End Sub
