@@ -1,0 +1,25 @@
+Dim result, no, r As Integer
+Private Sub Cmdbin_Click()
+convert (2)
+End Sub
+Private Sub Cmdoct_Click()
+convert (8)
+End Sub
+Private Sub Cmdhex_Click()
+convert (16)
+End Sub
+Public Sub convert(value As Integer)
+result = " "
+no = 0
+no = Val(Text1.Text)
+While no > 0
+r = no Mod value
+no = no \ value
+If r > 9 Then
+result = result & Chr(r + 55)
+Else
+result = r & result
+End If
+Wend
+Text2.Text = result
+End Sub
